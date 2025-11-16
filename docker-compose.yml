@@ -19,3 +19,23 @@ services:
     ports:
       - "8081:8081"
     container_name: cart-service
+
+  # warehouse-service:
+  #   build:
+  #     context: .
+  #     dockerfile: services/warehouse-service/Dockerfile
+  #   platform: linux/amd64
+  #   image: gocart-v2-warehouse-service:latest
+  #   ports:
+  #     - "8082:8082"
+  #   container_name: warehouse-service
+
+  # payment-service:
+  #   build:
+  #     context: .
+  #     dockerfile: services/payment-service/Dockerfile
+  #   platform: linux/amd64
+  #   image: gocart-v2-payment-service:latest
+  #   ports:
+  #     - "8083:8083"
+  #   container_name: payment-service
