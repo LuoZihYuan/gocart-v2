@@ -1,0 +1,21 @@
+name: gocart-v2
+services:
+  product-service:
+    build:
+      context: .
+      dockerfile: services/product-service/Dockerfile
+    platform: linux/amd64
+    image: gocart-v2-product-service:latest
+    ports:
+      - "8080:8080"
+    container_name: product-service
+
+  cart-service:
+    build:
+      context: .
+      dockerfile: services/cart-service/Dockerfile
+    platform: linux/amd64
+    image: gocart-v2-cart-service:latest
+    ports:
+      - "8081:8081"
+    container_name: cart-service
